@@ -130,6 +130,7 @@
                 a1.aoguid,
                 a1.parentguid,
                 a1.offname,
+                a1.formalname,
                 a1.shortname,
                 a1.aolevel
             FROM addrobj as a1
@@ -141,6 +142,7 @@
                 a2.aoguid,
                 a2.parentguid,
                 a2.offname,
+                a2.formalname,
                 a2.shortname,
                 a2.aolevel
             FROM addrobj as a2
