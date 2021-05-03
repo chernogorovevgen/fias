@@ -1,0 +1,3 @@
+CREATE DATABASE fias
+    OWNER postgres
+    ENCODING 'UTF-8';

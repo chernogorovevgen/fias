@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+        'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace="com.cdek.dao.mapper.FiasMapper">
+
+    <resultMap id="fiasMap" type="com.cdek.entity.Fias">
+        <result column="aoid" property="aoid"/>
+        <result column="aoguid" property="aoguid"/>
+        <result column="parentguid" property="parentguid"/>
+        <result column="formalname" property="formalname"/>
+        <result column="offname" property="offname"/>
+        <result column="shortname" property="shortname"/>
+        <result column="aolevel" property="aolevel"/>
+        <result column="regioncode" property="regioncode"/>
+        <result column="areacode" property="areacode"/>
+        <result column="autocode" property="autocode"/>
+        <result column="citycode" property="citycode"/>
+        <result column="ctarcode" property="ctarcode"/>
+        <result column="placecode" property="placecode"/>
+        <result column="plancode" property="plancode"/>
+        <result column="streetcode" property="streetcode"/>
+        <result column="extrcode" property="extrcode"/>
+        <result column="sextcode" property="sextcode"/>
+        <result column="plaincode" property="plaincode"/>
+        <result column="code" property="code"/>
+        <result column="currstatus" property="currstatus"/>
+        <result column="actstatus" property="actstatus"/>
+        <result column="livestatus" property="livestatus"/>
+        <result column="centstatus" property="centstatus"/>
+        <result column="operstatus" property="operstatus"/>
+        <result column="ifnsfl" property="ifnsfl"/>
+        <result column="okato" property="okato"/>
+        <result column="oktmo" property="oktmo"/>
+        <result column="startdate" property="startdate"/>
+        <result column="enddate" property="enddate"/>
+        <result column="updatedate" property="updatedate"/>
+        <result column="normdoc" property="normdoc"/>
+        <result column="divtype" property="divtype"/>
+        <result column="nextid" property="nextid"/>
+        <result column="terrifnsfl" property="terrifnsfl"/>
+        <result column="terrifnsul" property="terrifnsul"/>
+        <result column="postalcode" property="postalcode"/>
+        <result column="previd" property="previd"/>
+    </resultMap>
+
+
+    <select id="insertFias" resultType="java.lang.String">
+        INSERT INTO addrobj
+        (aoid,
+         aoguid,
+         parentguid,
+         formalname,
+         offname,
+         shortname,
+         aolevel,
+         regioncode,
+         areacode,
+         autocode,
+         citycode,
+         ctarcode,
+         placecode,
+         plancode,
+         streetcode,
+         extrcode,
+         sextcode,
+         plaincode,
+         code,
+         currstatus,
+         actstatus,
+         livestatus,
+         centstatus,
+         operstatus,
+         ifnsfl,
+         ifnsul,
+         okato,
+         oktmo,
+         startdate,
+         enddate,
+         updatedate,
+         normdoc,
+         divtype,
+         nextid,
+         terrifnsfl,
+         terrifnsul,
+         postalcode,
+         previd)
+        VALUES (#{entity.aoid},
+                #{entity.aoguid},
+                #{entity.parentguid},
+                #{entity.formalname},
+                #{entity.offname},
+                #{entity.shortname},
+                #{entity.aolevel},
+                #{entity.regioncode},
+                #{entity.areacode},
+                #{entity.autocode},
+                #{entity.citycode},
+                #{entity.ctarcode},
+                #{entity.placecode},
+                #{entity.plancode},
+                #{entity.streetcode},
+                #{entity.extrcode},
+                #{entity.sextcode},
+                #{entity.plaincode},
+                #{entity.code},
+                #{entity.currstatus},
+                #{entity.actstatus},
+                #{entity.livestatus},
+                #{entity.centstatus},
+                #{entity.operstatus},
+                #{entity.ifnsfl},
+                #{entity.ifnsul},
+                #{entity.okato},
+                #{entity.oktmo},
+                #{entity.startdate},
+                #{entity.enddate},
+                #{entity.updatedate},
+                #{entity.normdoc},
+                #{entity.divtype},
+                #{entity.nextid},
+                #{entity.terrifnsfl},
+                #{entity.terrifnsul},
+                #{entity.postalcode},
+                #{entity.previd}) RETURNING *
+    </select>
+
+    <select id="get" resultMap="fiasMap">
+        WITH RECURSIVE r AS (
+            SELECT distinct
+                a1.aoguid,
+                a1.parentguid,
+                a1.offname,
+                a1.shortname,
+                a1.aolevel
+            FROM addrobj as a1
+            WHERE a1.aoguid = = #{aoguid}
+
+            UNION
+
+            SELECT distinct
+                a2.aoguid,
+                a2.parentguid,
+                a2.offname,
+                a2.shortname,
+                a2.aolevel
+            FROM addrobj as a2
+                     INNER JOIN r ON a2.aoguid = r.parentguid
+        )
+        SELECT *
+        FROM r
+        order by aolevel ASC
+    </select>
+
+
+</mapper>
