@@ -65,7 +65,7 @@
                 a1.type_name,
                 a1.level
             FROM address_object as a1
-            WHERE a1.object_id = = #{objectId}
+            WHERE a1.object_guid = #{objectId}
 
             UNION
 
