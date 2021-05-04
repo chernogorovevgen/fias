@@ -50,22 +50,13 @@ public class XMLSample {
                                 && xmlStreamReader.getLocalName().equalsIgnoreCase("Object")) {
 
                             // extract the user data
-                            //Fias fias = new Fias();
                             Map<String, String> fieldMap = new HashMap<>();
                             int attributesCount = xmlStreamReader.getAttributeCount();
                             for (int i = 0; i < attributesCount; i++) {
-//                                fias.setAoid(xmlStreamReader.getAttributeLocalName(i),
-//                                        xmlStreamReader.getAttributeValue(i));
-//                                System.out.println(xmlStreamReader.getAttributeLocalName(i));
-//                                System.out.println(xmlStreamReader.getAttributeValue(i));
                                 fieldMap.put(xmlStreamReader.getAttributeLocalName(i).toLowerCase(),
                                         xmlStreamReader.getAttributeValue(i));
                             }
-                            // all other user record-related logic
-                            //System.out.println(fieldMap);
                             fiasDao.createFias(getFias(fieldMap));
-                            //System.out.println(fieldMap);
-
                         }
                     }
                 }
@@ -77,26 +68,20 @@ public class XMLSample {
 
     private Fias getFias(Map<String, String> fieldMap) {
         Fias fias = new Fias();
-        fias.setAoid(fieldMap.get("aoid"));
-        fias.setAoguid(fieldMap.get("aoguid"));
-        fias.setParentguid(fieldMap.get("parentguid"));
-        fias.setFormalname(fieldMap.get("formalname"));
-        fias.setOffname(fieldMap.get("offname"));
-        fias.setShortname(fieldMap.get("shortname"));
-        fias.setAolevel(fieldMap.get("aolevel"));
-        fias.setRegioncode(fieldMap.get("regioncode"));
-        fias.setAreacode(fieldMap.get("areacode"));
-        fias.setAutocode(fieldMap.get("autocode"));
-        fias.setCitycode(fieldMap.get("citycode"));
-        fias.setPlaincode(fieldMap.get("plaincode"));
-        fias.setCode(fieldMap.get("code"));
-        fias.setOkato(fieldMap.get("okato"));
-        fias.setOktmo(fieldMap.get("oktmo"));
-        fias.setStartdate(fieldMap.get("startdate"));
-        fias.setEnddate(fieldMap.get("enddate"));
-        fias.setNextid(fieldMap.get("nextid"));
-        fias.setPostalcode(fieldMap.get("postalcode"));
-        fias.setPrevid(fieldMap.get("previd"));
+        fias.setId(fieldMap.get("id"));
+        fias.setObjectId(fieldMap.get("objectid"));
+        fias.setObjectGuid(fieldMap.get("objectguid"));
+        fias.setChangeId(fieldMap.get("changeid"));
+        fias.setName(fieldMap.get("name"));
+        fias.setTypeName(fieldMap.get("typename"));
+        fias.setLevel(fieldMap.get("level"));
+        fias.setPrevId(fieldMap.get("previd"));
+        fias.setNextId(fieldMap.get("nextid"));
+        fias.setUpdateDate(fieldMap.get("updatedate"));
+        fias.setStartDate(fieldMap.get("startdate("));
+        fias.setEndDate(fieldMap.get("enddate"));
+        fias.setIsActual(fieldMap.get("isactual"));
+        fias.setIsActive(fieldMap.get("isactive"));
         return fias;
     }
 

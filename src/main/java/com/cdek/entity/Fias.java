@@ -2,346 +2,130 @@ package com.cdek.entity;
 
 public class Fias {
 
-    private String aoid;
-    private String aoguid;
-    private String parentguid;
-    private String formalname;
-    private String offname;
-    private String shortname;
-    private String aolevel;
-    private String regioncode;
-    private String areacode;
-    private String autocode;
-    private String citycode;
-    private String ctarcode;
-    private String placecode;
-    private String plancode;
-    private String streetcode;
-    private String extrcode;
-    private String sextcode;
-    private String plaincode;
-    private String code;
-    private String currstatus;
-    private String actstatus;
-    private String livestatus;
-    private String centstatus;
-    private String operstatus;
-    private String ifnsfl;
-    private String ifnsul;
-    private String okato;
-    private String oktmo;
-    private String startdate;
-    private String enddate;
-    private String updatedate;
-    private String normdoc;
-    private String divtype;
-    private String nextid;
-    private String terrifnsfl;
-    private String terrifnsul;
-    private String postalcode;
-    private String previd;
+    private String id;
+    private String objectId;
+    private String objectGuid;
+    private String changeId;
+    private String name;
+    private String typeName;
+    private String level;
+    private String prevId;
+    private String nextId;
+    private String updateDate;
+    private String startDate;
+    private String endDate;
+    private String isActual;
+    private String isActive;
 
-    public String getAoid() {
-        return aoid;
+    public String getId() {
+        return id;
     }
 
-    public void setAoid(String aoid) {
-        this.aoid = aoid;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getAoguid() {
-        return aoguid;
+    public String getObjectId() {
+        return objectId;
     }
 
-    public void setAoguid(String aoguid) {
-        this.aoguid = aoguid;
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 
-    public String getParentguid() {
-        return parentguid;
+    public String getObjectGuid() {
+        return objectGuid;
     }
 
-    public void setParentguid(String parentguid) {
-        this.parentguid = parentguid;
+    public void setObjectGuid(String objectGuid) {
+        this.objectGuid = objectGuid;
     }
 
-    public String getFormalname() {
-        return formalname;
+    public String getChangeId() {
+        return changeId;
     }
 
-    public void setFormalname(String formalname) {
-        this.formalname = formalname;
+    public void setChangeId(String changeId) {
+        this.changeId = changeId;
     }
 
-    public String getOffname() {
-        return offname;
+    public String getName() {
+        return name;
     }
 
-    public void setOffname(String offname) {
-        this.offname = offname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getShortname() {
-        return shortname;
+    public String getTypeName() {
+        return typeName;
     }
 
-    public void setShortname(String shortname) {
-        this.shortname = shortname;
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
-    public String getAolevel() {
-        return aolevel;
+    public String getLevel() {
+        return level;
     }
 
-    public void setAolevel(String aolevel) {
-        this.aolevel = aolevel;
+    public void setLevel(String level) {
+        this.level = level;
     }
 
-    public String getRegioncode() {
-        return regioncode;
+    public String getPrevId() {
+        return prevId;
     }
 
-    public void setRegioncode(String regioncode) {
-        this.regioncode = regioncode;
+    public void setPrevId(String prevId) {
+        this.prevId = prevId;
     }
 
-    public String getAreacode() {
-        return areacode;
+    public String getNextId() {
+        return nextId;
     }
 
-    public void setAreacode(String areacode) {
-        this.areacode = areacode;
+    public void setNextId(String nextId) {
+        this.nextId = nextId;
     }
 
-    public String getAutocode() {
-        return autocode;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    public void setAutocode(String autocode) {
-        this.autocode = autocode;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    public String getCitycode() {
-        return citycode;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setCitycode(String citycode) {
-        this.citycode = citycode;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
-    public String getCtarcode() {
-        return ctarcode;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setCtarcode(String ctarcode) {
-        this.ctarcode = ctarcode;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
-    public String getPlacecode() {
-        return placecode;
+    public String getIsActual() {
+        return isActual;
     }
 
-    public void setPlacecode(String placecode) {
-        this.placecode = placecode;
+    public void setIsActual(String isActual) {
+        this.isActual = isActual;
     }
 
-    public String getPlancode() {
-        return plancode;
+    public String getIsActive() {
+        return isActive;
     }
 
-    public void setPlancode(String plancode) {
-        this.plancode = plancode;
-    }
-
-    public String getStreetcode() {
-        return streetcode;
-    }
-
-    public void setStreetcode(String streetcode) {
-        this.streetcode = streetcode;
-    }
-
-    public String getExtrcode() {
-        return extrcode;
-    }
-
-    public void setExtrcode(String extrcode) {
-        this.extrcode = extrcode;
-    }
-
-    public String getSextcode() {
-        return sextcode;
-    }
-
-    public void setSextcode(String sextcode) {
-        this.sextcode = sextcode;
-    }
-
-    public String getPlaincode() {
-        return plaincode;
-    }
-
-    public void setPlaincode(String plaincode) {
-        this.plaincode = plaincode;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getCurrstatus() {
-        return currstatus;
-    }
-
-    public void setCurrstatus(String currstatus) {
-        this.currstatus = currstatus;
-    }
-
-    public String getActstatus() {
-        return actstatus;
-    }
-
-    public void setActstatus(String actstatus) {
-        this.actstatus = actstatus;
-    }
-
-    public String getLivestatus() {
-        return livestatus;
-    }
-
-    public void setLivestatus(String livestatus) {
-        this.livestatus = livestatus;
-    }
-
-    public String getCentstatus() {
-        return centstatus;
-    }
-
-    public void setCentstatus(String centstatus) {
-        this.centstatus = centstatus;
-    }
-
-    public String getOperstatus() {
-        return operstatus;
-    }
-
-    public void setOperstatus(String operstatus) {
-        this.operstatus = operstatus;
-    }
-
-    public String getIfnsfl() {
-        return ifnsfl;
-    }
-
-    public void setIfnsfl(String ifnsfl) {
-        this.ifnsfl = ifnsfl;
-    }
-
-    public String getIfnsul() {
-        return ifnsul;
-    }
-
-    public void setIfnsul(String ifnsul) {
-        this.ifnsul = ifnsul;
-    }
-
-    public String getOkato() {
-        return okato;
-    }
-
-    public void setOkato(String okato) {
-        this.okato = okato;
-    }
-
-    public String getOktmo() {
-        return oktmo;
-    }
-
-    public void setOktmo(String oktmo) {
-        this.oktmo = oktmo;
-    }
-
-    public String getStartdate() {
-        return startdate;
-    }
-
-    public void setStartdate(String startdate) {
-        this.startdate = startdate;
-    }
-
-    public String getEnddate() {
-        return enddate;
-    }
-
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
-    }
-
-    public String getUpdatedate() {
-        return updatedate;
-    }
-
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
-    }
-
-    public String getNormdoc() {
-        return normdoc;
-    }
-
-    public void setNormdoc(String normdoc) {
-        this.normdoc = normdoc;
-    }
-
-    public String getDivtype() {
-        return divtype;
-    }
-
-    public void setDivtype(String divtype) {
-        this.divtype = divtype;
-    }
-
-    public String getNextid() {
-        return nextid;
-    }
-
-    public void setNextid(String nextid) {
-        this.nextid = nextid;
-    }
-
-    public String getTerrifnsfl() {
-        return terrifnsfl;
-    }
-
-    public void setTerrifnsfl(String terrifnsfl) {
-        this.terrifnsfl = terrifnsfl;
-    }
-
-    public String getTerrifnsul() {
-        return terrifnsul;
-    }
-
-    public void setTerrifnsul(String terrifnsul) {
-        this.terrifnsul = terrifnsul;
-    }
-
-    public String getPostalcode() {
-        return postalcode;
-    }
-
-    public void setPostalcode(String postalcode) {
-        this.postalcode = postalcode;
-    }
-
-    public String getPrevid() {
-        return previd;
-    }
-
-    public void setPrevid(String previd) {
-        this.previd = previd;
+    public void setIsActive(String isActive) {
+        this.isActive = isActive;
     }
 }
